@@ -26,7 +26,7 @@ export default function Dashboard() {
     <div className="flex min-h-screen bg-[#fafafa]">
       {/* Sidebar */}
       <div
-        className={`bg-white border-r border-[#e0e0e0] transition-all duration-300 ${sidebarOpen ? "w-64" : "w-20"} fixed md:relative`}
+        className={`bg-white border-r border-[#e0e0e0] transition-all duration-300 ${sidebarOpen ? "w-68" : "w-24"} fixed md:relative`}
       >
         <div className="p-4 border-b border-[#e0e0e0] flex items-center">
           <h1 className="text-xl font-bold text-[#161e54]">WeHR</h1>
@@ -96,10 +96,10 @@ export default function Dashboard() {
       </div>
 
       {/* Main Content */}
-      <div className={`flex-1 ${sidebarOpen ? "ml-64" : "ml-20"} md:ml-0 p-4 md:p-6`}>
+      <div className={`flex-1 ${sidebarOpen ? "ml-68" : "ml-24"} md:ml-0 p-4 md:p-6`}>
         {/* Header */}
         <header className="bg-white border-b border-[#e0e0e0] p-4 flex items-center justify-between">
-          <div className="relative w-full md:w-64">
+          <div className="relative w-full md:w-60">
             <Search className="absolute left-2 top-1/2 transform -translate-y-1/2 h-4 w-4 text-[#b2b2b2]" />
             <Input placeholder="Search" className="pl-8 border-[#e0e0e0] bg-[#f8f8f8] focus:ring-[#3786f1]" />
           </div>
@@ -368,4 +368,3 @@ export default function Dashboard() {
     </div>
   )
 }
-
