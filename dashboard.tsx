@@ -18,6 +18,7 @@ import {
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
+import img from "@/components/image.jpg"
 
 export default function Dashboard() {
   const [sidebarOpen, setSidebarOpen] = useState(false)
@@ -112,10 +113,7 @@ export default function Dashboard() {
               <Mail className="h-5 w-5" />
             </Button>
             <div className="flex items-center">
-              <Avatar className="h-8 w-8 border border-[#e0e0e0]">
-                <AvatarImage src="/placeholder.svg?height=32&width=32" alt="Admin" />
-                <AvatarFallback>AJ</AvatarFallback>
-              </Avatar>
+              <img src={img.src} alt="Admin Avatar" className="h-8 w-8 border border-[#e0e0e0] rounded-full" />
               <div className="ml-2 flex items-center">
                 <span className="text-sm font-medium">Admin John</span>
                 <ChevronDown className="ml-1 h-4 w-4 text-[#b2b2b2]" />
