@@ -2,6 +2,6 @@
 
 import Dashboard from "../dashboard"
 
-export default function SyntheticV0PageForDeployment() {
+export default function DigiLabsAssignment() {
   return <Dashboard />;
 }
