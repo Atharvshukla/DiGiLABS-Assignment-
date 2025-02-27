@@ -39,35 +39,35 @@ export default function Dashboard() {
           <div className="px-4 mb-2 text-xs font-medium text-[#b2b2b2]">{sidebarOpen ? "MAIN MENU" : ""}</div>
 
           <nav className="space-y-1">
-            <a href="#" className="flex items-center px-4 py-2 text-sm font-medium text-[#ff5151] bg-[#ffefe7]">
+            <a href="#" className="flex items-center px-4 py-2 text-sm font-medium  hover:text-[#ff5151] hover:bg-[#ffefe7]">
               <div className="flex items-center justify-center w-8 h-8">
                 <LineChart className="h-5 w-5" />
               </div>
               {sidebarOpen && <span className="ml-3">Dashboard</span>}
             </a>
 
-            <a href="#" className="flex items-center px-4 py-2 text-sm font-medium text-[#686868] hover:bg-[#f8f8f8]">
+            <a href="#" className="flex items-center px-4 py-2 text-sm font-medium text-[#686868] hover:text-[#ff5151] hover:bg-[#ffefe7]">
               <div className="flex items-center justify-center w-8 h-8">
                 <Users className="h-5 w-5" />
               </div>
               {sidebarOpen && <span className="ml-3">Recruitment</span>}
             </a>
 
-            <a href="#" className="flex items-center px-4 py-2 text-sm font-medium text-[#686868] hover:bg-[#f8f8f8]">
+            <a href="#" className="flex items-center px-4 py-2 text-sm font-medium text-[#686868] hover:text-[#ff5151] hover:bg-[#ffefe7]">
               <div className="flex items-center justify-center w-8 h-8">
                 <Clock className="h-5 w-5" />
               </div>
               {sidebarOpen && <span className="ml-3">Schedule</span>}
             </a>
 
-            <a href="#" className="flex items-center px-4 py-2 text-sm font-medium text-[#686868] hover:bg-[#f8f8f8]">
+            <a href="#" className="flex items-center px-4 py-2 text-sm font-medium text-[#686868] hover:text-[#ff5151] hover:bg-[#ffefe7]">
               <div className="flex items-center justify-center w-8 h-8">
                 <User className="h-5 w-5" />
               </div>
               {sidebarOpen && <span className="ml-3">Employee</span>}
             </a>
 
-            <a href="#" className="flex items-center px-4 py-2 text-sm font-medium text-[#686868] hover:bg-[#f8f8f8]">
+            <a href="#" className="flex items-center px-4 py-2 text-sm font-medium text-[#686868] hover:text-[#ff5151] hover:bg-[#ffefe7]">
               <div className="flex items-center justify-center w-8 h-8">
                 <Users className="h-5 w-5" />
               </div>
@@ -78,14 +78,14 @@ export default function Dashboard() {
           <div className="mt-8 px-4 mb-2 text-xs font-medium text-[#b2b2b2]">{sidebarOpen ? "OTHER" : ""}</div>
 
           <nav className="space-y-1">
-            <a href="#" className="flex items-center px-4 py-2 text-sm font-medium text-[#686868] hover:bg-[#f8f8f8]">
+            <a href="#" className="flex items-center px-4 py-2 text-sm font-medium text-[#686868]  hover:text-[#ff5151] hover:bg-[#ffefe7]">
               <div className="flex items-center justify-center w-8 h-8">
                 <Settings className="h-5 w-5" />
               </div>
               {sidebarOpen && <span className="ml-3">Support</span>}
             </a>
 
-            <a href="#" className="flex items-center px-4 py-2 text-sm font-medium text-[#686868] hover:bg-[#f8f8f8]">
+            <a href="#" className="flex items-center px-4 py-2 text-sm font-medium text-[#686868]  hover:text-[#ff5151] hover:bg-[#ffefe7]">
               <div className="flex items-center justify-center w-8 h-8">
                 <Settings className="h-5 w-5" />
               </div>
