@@ -21,17 +21,19 @@ import { Input } from "@/components/ui/input"
 import img from "@/components/image.jpg"
 
 export default function Dashboard() {
-  const [sidebarOpen, setSidebarOpen] = useState(false)
+  const [sidebarOpen, setSidebarOpen] = useState(true)
 
   return (
     <div className="flex min-h-screen bg-[#fafafa]">
       {/* Sidebar */}
       <div
-        className={`bg-white border-r border-[#e0e0e0] transition-all duration-300 ${sidebarOpen ? "w-68" : "w-24"} fixed md:relative`}
+        className={`bg-white border-r border-[#e0e0e0] transition-all duration-500 ease-in-out ${
+          sidebarOpen ? "w-68" : "w-0"
+        } fixed md:relative`}
       >
-        <div className="p-4 border-b border-[#e0e0e0] flex items-center">
+        <div className={`p-4 border-b border-[#e0e0e0] flex items-center ${sidebarOpen ? "" : "hidden md:flex"}`}>
           <h1 className="text-xl font-bold text-[#161e54]">WeHR</h1>
-          <Button variant="ghost" size="icon" className="ml-auto" onClick={() => setSidebarOpen(!sidebarOpen)}>
+          <Button variant="ghost" size="icon" className="ml-auto transition-all duration-500 ease-in-out" onClick={() => setSidebarOpen(!sidebarOpen)}>
             <Menu className="h-5 w-5" />
           </Button>
         </div>
@@ -40,37 +42,37 @@ export default function Dashboard() {
           <div className="px-4 mb-2 text-xs font-medium text-[#b2b2b2]">{sidebarOpen ? "MAIN MENU" : ""}</div>
 
           <nav className="space-y-1">
-            <a href="#" className="flex items-center px-4 py-2 text-sm font-medium text-[#ff5151] bg-[#ffefe7] hover:text-[#ff5151] hover:bg-[#ffefe7]">
-              <div className="flex items-center justify-center w-8 h-8">
-                <LineChart className="h-5 w-5" />
+            <a href="#" className={`flex items-center px-4 py-2 text-sm font-medium ${sidebarOpen ? "text-[rgb(85,85,85)] bg-transparent hover:bg-[#ffefe7]" : "hidden md:flex"}`}>
+              <div className="flex items-center justify-center w-16 h-16 hover:bg-[#ffefe7]">
+                <LineChart className="h-8 w-8" />
               </div>
               {sidebarOpen && <span className="ml-3">Dashboard</span>}
             </a>
 
-            <a href="#" className="flex items-center px-4 py-2 text-sm font-medium text-[#686868] hover:text-[#ff5151] hover:bg-[#ffefe7]">
-              <div className="flex items-center justify-center w-8 h-8">
-                <Users className="h-5 w-5" />
+            <a href="#" className={`flex items-center px-4 py-2 text-sm font-medium ${sidebarOpen ? "text-[rgb(85,85,85)] bg-transparent hover:bg-[#ffefe7]" : "hidden md:flex"}`}>
+              <div className="flex items-center justify-center w-16 h-16 hover:bg-[#ffefe7]">
+                <Users className="h-8 w-8" />
               </div>
               {sidebarOpen && <span className="ml-3">Recruitment</span>}
             </a>
 
-            <a href="#" className="flex items-center px-4 py-2 text-sm font-medium text-[#686868] hover:text-[#ff5151] hover:bg-[#ffefe7]">
-              <div className="flex items-center justify-center w-8 h-8">
-                <Clock className="h-5 w-5" />
+            <a href="#" className={`flex items-center px-4 py-2 text-sm font-medium ${sidebarOpen ? "text-[rgb(85,85,85)] bg-transparent hover:bg-[#ffefe7]" : "hidden md:flex"}`}>
+              <div className="flex items-center justify-center w-16 h-16 hover:bg-[#ffefe7]">
+                <Clock className="h-8 w-8" />
               </div>
               {sidebarOpen && <span className="ml-3">Schedule</span>}
             </a>
 
-            <a href="#" className="flex items-center px-4 py-2 text-sm font-medium text-[#686868] hover:text-[#ff5151] hover:bg-[#ffefe7]">
-              <div className="flex items-center justify-center w-8 h-8">
-                <User className="h-5 w-5" />
+            <a href="#" className={`flex items-center px-4 py-2 text-sm font-medium ${sidebarOpen ? "text-[rgb(85,85,85)] bg-transparent hover:bg-[#ffefe7]" : "hidden md:flex"}`}>
+              <div className="flex items-center justify-center w-16 h-16 hover:bg-[#ffefe7]">
+                <User className="h-8 w-8" />
               </div>
               {sidebarOpen && <span className="ml-3">Employee</span>}
             </a>
 
-            <a href="#" className="flex items-center px-4 py-2 text-sm font-medium text-[#686868] hover:text-[#ff5151] hover:bg-[#ffefe7]">
-              <div className="flex items-center justify-center w-8 h-8">
-                <Users className="h-5 w-5" />
+            <a href="#" className={`flex items-center px-4 py-2 text-sm font-medium ${sidebarOpen ? "text-[rgb(85,85,85)] bg-transparent hover:bg-[#ffefe7]" : "hidden md:flex"}`}>
+              <div className="flex items-center justify-center w-16 h-16 hover:bg-[#ffefe7]">
+                <Users className="h-8 w-8" />
               </div>
               {sidebarOpen && <span className="ml-3">Department</span>}
             </a>
@@ -79,14 +81,14 @@ export default function Dashboard() {
           <div className="mt-8 px-4 mb-2 text-xs font-medium text-[#b2b2b2]">{sidebarOpen ? "OTHER" : ""}</div>
 
           <nav className="space-y-1">
-            <a href="#" className="flex items-center px-4 py-2 text-sm font-medium text-[#686868] hover:bg-[#f8f8f8]">
+            <a href="#" className={`flex items-center px-4 py-2 text-sm font-medium ${sidebarOpen ? "text-[rgb(85,85,85)] bg-transparent hover:bg-[#ffefe7]" : "hidden md:flex"}`}>
               <div className="flex items-center justify-center w-8 h-8">
                 <Settings className="h-5 w-5" />
               </div>
               {sidebarOpen && <span className="ml-3">Support</span>}
             </a>
 
-            <a href="#" className="flex items-center px-4 py-2 text-sm font-medium text-[#686868] hover:bg-[#f8f8f8]">
+            <a href="#" className={`flex items-center px-4 py-2 text-sm font-medium ${sidebarOpen ? "text-[rgb(85,85,85)] bg-transparent hover:bg-[#ffefe7]" : "hidden md:flex"}`}>
               <div className="flex items-center justify-center w-8 h-8">
                 <Settings className="h-5 w-5" />
               </div>
@@ -97,12 +99,15 @@ export default function Dashboard() {
       </div>
 
       {/* Main Content */}
-      <div className={`flex-1 ${sidebarOpen ? "ml-68" : "ml-24"} md:ml-0 p-4 md:p-6`}>
+      <div className={`flex-1 transition-all duration-300 ${sidebarOpen ? "ml-4" : "ml-0 md:ml-20"} p-4 md:p-6`}>
         {/* Header */}
         <header className="bg-white border-b border-[#e0e0e0] p-4 flex items-center justify-between">
-          <div className="relative w-full md:w-60">
-            <Search className="absolute left-2 top-1/2 transform -translate-y-1/2 h-4 w-4 text-[#b2b2b2]" />
-            <Input placeholder="Search" className="pl-8 border-[#e0e0e0] bg-[#f8f8f8] focus:ring-[#3786f1]" />
+          <Button variant="ghost" size="icon" className="md:hidden" onClick={() => setSidebarOpen(!sidebarOpen)}>
+            <Menu className="h-5 w-5" />
+          </Button>
+          <div className="flex items-center space-x-2">
+            <Search className="h-4 w-4 text-[#b2b2b2]" />
+            <Input placeholder="Search" className="w-32 md:w-60 pl-8 border-[#e0e0e0] bg-[#f8f8f8] focus:ring-[#3786f1]" />
           </div>
 
           <div className="flex items-center space-x-4">
